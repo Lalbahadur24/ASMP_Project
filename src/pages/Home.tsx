@@ -77,7 +77,7 @@ const Home = () => {
       <HeroSection />
       
       {/* Featured Properties */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-gray-50 dark:bg-gray-900/20">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
             <div>
@@ -85,25 +85,27 @@ const Home = () => {
               <p className="text-muted-foreground">Discover our handpicked accommodations for students</p>
             </div>
             <Link to="/listings">
-              <Button variant="outline" className="mt-4 md:mt-0 gap-2">
+              <Button variant="outline" className="mt-4 md:mt-0 gap-2 hover:bg-primary hover:text-white">
                 View All
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProperties.map((property) => (
-              <RoomCard key={property.id} {...property} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            {featuredProperties.map((property, index) => (
+              <div key={property.id} className="animate-fade-in" style={{ animationDelay: `${0.1 * (index + 1)}s` }}>
+                <RoomCard {...property} />
+              </div>
             ))}
           </div>
         </div>
       </section>
       
       {/* How It Works */}
-      <section className="py-16 px-4 bg-accent/50">
+      <section className="py-16 px-4 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-900/80">
         <div className="container mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">How AccomFind Works</h2>
             <p className="text-muted-foreground">
               Finding your ideal student accommodation is now easier than ever with our AI-powered platform
@@ -112,7 +114,7 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Step 1 */}
-            <div className="bg-background rounded-xl p-6 shadow-sm border border-border flex flex-col items-start animate-hover">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border border-border flex flex-col items-start hover:shadow-lg transition-all duration-300 animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <div className="bg-primary/10 p-3 rounded-full mb-4">
                 <Search className="h-6 w-6 text-primary" />
               </div>
@@ -137,7 +139,7 @@ const Home = () => {
             </div>
             
             {/* Step 2 */}
-            <div className="bg-background rounded-xl p-6 shadow-sm border border-border flex flex-col items-start animate-hover">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border border-border flex flex-col items-start hover:shadow-lg transition-all duration-300 animate-fade-in" style={{ animationDelay: "0.3s" }}>
               <div className="bg-primary/10 p-3 rounded-full mb-4">
                 <Brain className="h-6 w-6 text-primary" />
               </div>
@@ -159,7 +161,7 @@ const Home = () => {
             </div>
             
             {/* Step 3 */}
-            <div className="bg-background rounded-xl p-6 shadow-sm border border-border flex flex-col items-start animate-hover">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border border-border flex flex-col items-start hover:shadow-lg transition-all duration-300 animate-fade-in" style={{ animationDelay: "0.4s" }}>
               <div className="bg-primary/10 p-3 rounded-full mb-4">
                 <MessageCircle className="h-6 w-6 text-primary" />
               </div>
@@ -184,9 +186,9 @@ const Home = () => {
       </section>
       
       {/* Testimonials */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-gray-50 dark:bg-gray-900/20">
         <div className="container mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">What Students Say</h2>
             <p className="text-muted-foreground">
               Thousands of students have found their perfect accommodation using our platform
@@ -195,19 +197,19 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Testimonial 1 */}
-            <div className="bg-gradient-to-br from-primary/5 to-accent/20 rounded-xl p-6 shadow-sm border border-border">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border-t-4 border-primary border animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <div className="flex items-center gap-4 mb-6">
                 <img 
                   src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3" 
                   alt="Student" 
-                  className="w-14 h-14 rounded-full object-cover"
+                  className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
                 />
                 <div>
                   <h3 className="font-semibold">Sarah T.</h3>
                   <p className="text-muted-foreground text-sm">Computer Science, Delhi University</p>
                 </div>
               </div>
-              <p className="italic mb-4">
+              <p className="italic mb-4 text-gray-600 dark:text-gray-300">
                 "The AI recommendations were spot on! Found my perfect room in just one day. The interface was so intuitive and the chat feature made it easy to talk to landlords."
               </p>
               <div className="flex">
@@ -218,19 +220,19 @@ const Home = () => {
             </div>
             
             {/* Testimonial 2 */}
-            <div className="bg-gradient-to-br from-primary/5 to-accent/20 rounded-xl p-6 shadow-sm border border-border">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border-t-4 border-primary border animate-fade-in" style={{ animationDelay: "0.3s" }}>
               <div className="flex items-center gap-4 mb-6">
                 <img 
                   src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3" 
                   alt="Student" 
-                  className="w-14 h-14 rounded-full object-cover"
+                  className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
                 />
                 <div>
                   <h3 className="font-semibold">Rahul M.</h3>
                   <p className="text-muted-foreground text-sm">Engineering, IIT Bombay</p>
                 </div>
               </div>
-              <p className="italic mb-4">
+              <p className="italic mb-4 text-gray-600 dark:text-gray-300">
                 "As a new student in Mumbai, I was worried about finding a good place. AccomFind made it so simple! The verified listings gave me peace of mind, and I saved so much time."
               </p>
               <div className="flex">
@@ -241,19 +243,19 @@ const Home = () => {
             </div>
             
             {/* Testimonial 3 */}
-            <div className="bg-gradient-to-br from-primary/5 to-accent/20 rounded-xl p-6 shadow-sm border border-border">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border-t-4 border-primary border animate-fade-in" style={{ animationDelay: "0.4s" }}>
               <div className="flex items-center gap-4 mb-6">
                 <img 
                   src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3" 
                   alt="Student" 
-                  className="w-14 h-14 rounded-full object-cover"
+                  className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
                 />
                 <div>
                   <h3 className="font-semibold">Priya K.</h3>
                   <p className="text-muted-foreground text-sm">Business, Symbiosis Pune</p>
                 </div>
               </div>
-              <p className="italic mb-4">
+              <p className="italic mb-4 text-gray-600 dark:text-gray-300">
                 "The no-brokerage policy saved me thousands! Plus, the detailed filters helped me find exactly what I needed - a furnished apartment near my campus with good security."
               </p>
               <div className="flex">
@@ -267,10 +269,10 @@ const Home = () => {
       </section>
       
       {/* Trust Features */}
-      <section className="py-16 px-4 bg-gradient-to-r from-primary/10 to-accent/20">
+      <section className="py-16 px-4 bg-gradient-to-r from-primary/5 via-accent/10 to-primary/5">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
+            <div className="text-center p-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <div className="bg-white dark:bg-gray-800 rounded-full size-16 flex items-center justify-center mx-auto mb-4 shadow-md">
                 <Shield className="h-8 w-8 text-primary" />
               </div>
@@ -280,7 +282,7 @@ const Home = () => {
               </p>
             </div>
             
-            <div className="text-center p-6">
+            <div className="text-center p-6 animate-fade-in" style={{ animationDelay: "0.3s" }}>
               <div className="bg-white dark:bg-gray-800 rounded-full size-16 flex items-center justify-center mx-auto mb-4 shadow-md">
                 <CreditCard className="h-8 w-8 text-primary" />
               </div>
@@ -290,7 +292,7 @@ const Home = () => {
               </p>
             </div>
             
-            <div className="text-center p-6">
+            <div className="text-center p-6 animate-fade-in" style={{ animationDelay: "0.4s" }}>
               <div className="bg-white dark:bg-gray-800 rounded-full size-16 flex items-center justify-center mx-auto mb-4 shadow-md">
                 <MessageCircle className="h-8 w-8 text-primary" />
               </div>
@@ -306,7 +308,7 @@ const Home = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-10 md:p-16 text-center text-white relative overflow-hidden">
+          <div className="bg-gradient-to-r from-blue-600 to-violet-600 rounded-2xl p-10 md:p-16 text-center text-white relative overflow-hidden animate-fade-in">
             {/* Background Elements */}
             <div className="absolute top-0 right-0 h-64 w-64 rounded-full bg-white/10 -translate-y-1/3 translate-x-1/3"></div>
             <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-white/10 translate-y-1/3 -translate-x-1/3"></div>
@@ -322,7 +324,7 @@ const Home = () => {
                 <Button 
                   size="lg" 
                   variant="secondary"
-                  className="gap-2"
+                  className="gap-2 bg-white text-blue-600 hover:bg-gray-100"
                   onClick={() => window.location.href = '/signup'}
                 >
                   Sign Up Now
@@ -331,7 +333,7 @@ const Home = () => {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="border-white/50 hover:bg-white/20 hover:border-white"
+                  className="border-white/50 text-white hover:bg-white/20 hover:border-white"
                   onClick={() => window.location.href = '/listings'}
                 >
                   Browse Listings
