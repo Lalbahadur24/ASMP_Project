@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -84,11 +85,46 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				fadeIn: {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				slideInFromRight: {
+					'0%': { transform: 'translateX(100%)' },
+					'100%': { transform: 'translateX(0)' }
+				},
+				slideInFromLeft: {
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(0)' }
+				},
+				slideInFromTop: {
+					'0%': { transform: 'translateY(-100%)' },
+					'100%': { transform: 'translateY(0)' }
+				},
+				slideInFromBottom: {
+					'0%': { transform: 'translateY(100%)' },
+					'100%': { transform: 'translateY(0)' }
+				},
+				float: {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				scaleIn: {
+					'0%': { transform: 'scale(0.9)', opacity: '0' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fadeIn 0.5s ease-in-out',
+				'slide-in-right': 'slideInFromRight 0.4s ease-out',
+				'slide-in-left': 'slideInFromLeft 0.4s ease-out',
+				'slide-in-top': 'slideInFromTop 0.4s ease-out',
+				'slide-in-bottom': 'slideInFromBottom 0.4s ease-out',
+				'float': 'float 5s ease-in-out infinite',
+				'scale-in': 'scaleIn 0.5s ease-out'
 			}
 		}
 	},
