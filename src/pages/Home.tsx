@@ -14,17 +14,24 @@ import {
   Building
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import durgeshImg from "../assest/durgesh.png";
+import awanishpic from "../assest/awanish.png";
+import vadodpic from "../assest/vadodarapic.png";
+import bangImg from "../assest/bagalore.png";
+import puneImg from '../assest/pune.png';
+import hyImg from '../assest/Hyderabad.png';
+
 
 // Mock data for featured properties
 const featuredProperties = [
   {
     id: '1',
     title: 'Modern PG near North Campus',
-    location: 'Hudson Lane, Delhi',
+    location: 'Vadodara, Gujarat',
     price: 12000,
     rating: 4.8,
     reviewCount: 120,
-    image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3',
+    image: vadodpic,
     amenities: ['WiFi', 'AC', 'Furnished', 'Laundry'],
     type: 'PG',
     isNew: true
@@ -36,7 +43,7 @@ const featuredProperties = [
     price: 22000,
     rating: 4.6,
     reviewCount: 85,
-    image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3',
+    image: bangImg,
     amenities: ['WiFi', 'AC', 'Furnished', 'Parking', 'Security'],
     type: '2 BHK',
   },
@@ -47,7 +54,7 @@ const featuredProperties = [
     price: 18000,
     rating: 4.7,
     reviewCount: 64,
-    image: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3',
+    image: puneImg,
     amenities: ['WiFi', 'AC', 'Gym', 'Kitchen', 'Parking'],
     type: 'Studio',
     isNew: true
@@ -59,7 +66,7 @@ const featuredProperties = [
     price: 8000,
     rating: 4.3,
     reviewCount: 102,
-    image: 'https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3',
+    image: hyImg,
     amenities: ['WiFi', 'Laundry', 'Security', 'Kitchen'],
     type: 'Hostel',
   }
@@ -200,13 +207,13 @@ const Home = () => {
             <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border-t-4 border-primary border animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <div className="flex items-center gap-4 mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                  src={durgeshImg}
                   alt="Student" 
                   className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
                 />
                 <div>
-                  <h3 className="font-semibold">Sarah T.</h3>
-                  <p className="text-muted-foreground text-sm">Computer Science, Delhi University</p>
+                  <h3 className="font-semibold">Durgesh Yadav</h3>
+                  <p className="text-muted-foreground text-sm">Computer Science, Parul University</p>
                 </div>
               </div>
               <p className="italic mb-4 text-gray-600 dark:text-gray-300">
@@ -223,17 +230,17 @@ const Home = () => {
             <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md border-t-4 border-primary border animate-fade-in" style={{ animationDelay: "0.3s" }}>
               <div className="flex items-center gap-4 mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                  src={awanishpic} 
                   alt="Student" 
                   className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
                 />
                 <div>
-                  <h3 className="font-semibold">Rahul M.</h3>
-                  <p className="text-muted-foreground text-sm">Engineering, IIT Bombay</p>
+                  <h3 className="font-semibold">Awanish Upadhyay</h3>
+                  <p className="text-muted-foreground text-sm">Engineering, Parul Institute of Technology</p>
                 </div>
               </div>
               <p className="italic mb-4 text-gray-600 dark:text-gray-300">
-                "As a new student in Mumbai, I was worried about finding a good place. AccomFind made it so simple! The verified listings gave me peace of mind, and I saved so much time."
+                "As a new student in Vadodara, I was worried about finding a good place. AccomFind made it so simple! The verified listings gave me peace of mind, and I saved so much time."
               </p>
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((star) => (
@@ -251,8 +258,8 @@ const Home = () => {
                   className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
                 />
                 <div>
-                  <h3 className="font-semibold">Priya K.</h3>
-                  <p className="text-muted-foreground text-sm">Business, Symbiosis Pune</p>
+                  <h3 className="font-semibold">Kana Ram Swami</h3>
+                  <p className="text-muted-foreground text-sm">CSE, PIET</p>
                 </div>
               </div>
               <p className="italic mb-4 text-gray-600 dark:text-gray-300">

@@ -19,16 +19,16 @@ const Footer = () => {
               The smartest way for students to find their perfect accommodation using AI-powered recommendations.
             </p>
             <div className="flex space-x-4 pt-2">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/in/lal-bahadur-lohar-704741333/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -93,16 +93,16 @@ const Footer = () => {
             <h3 className="font-medium text-foreground mb-4">Contact Us</h3>
             <ul className="space-y-2">
               <li className="text-muted-foreground text-sm">
-                123 University Street
+                Ranchodhham, Madodhar road
               </li>
               <li className="text-muted-foreground text-sm">
-                Campus Town, CT 10101
+                Waghodia, Vadodara (391760)
               </li>
               <li className="text-muted-foreground text-sm">
-                contact@accomfind.com
+                lalbahadurlohar01@gmail.com
               </li>
               <li className="text-muted-foreground text-sm">
-                +1 (555) 123-4567
+                +91 6354535339
               </li>
             </ul>
           </div>

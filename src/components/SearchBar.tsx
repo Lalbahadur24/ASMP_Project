@@ -74,6 +74,8 @@ const SearchBar = ({ variant = "default" }) => {
               <SelectValue placeholder="Select city" />
             </SelectTrigger>
             <SelectContent>
+              <SelectItem value="Use location">Use location</SelectItem>
+              <SelectItem value="Vadodara">Vadodara</SelectItem>
               <SelectItem value="mumbai">Mumbai</SelectItem>
               <SelectItem value="delhi">Delhi</SelectItem>
               <SelectItem value="bangalore">Bangalore</SelectItem>

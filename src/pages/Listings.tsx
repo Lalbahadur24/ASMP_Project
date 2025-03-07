@@ -4,17 +4,21 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import RoomCard from '../components/RoomCard';
+import vadodarapic from '../assest/vadodarapic.png';
+import bangImg from '../assest/bagalore.png';
+import puneImg from '../assest/pune.png';
+import hyImg from '../assest/Hyderabad.png';
 
 // Mock data for listings
 const allListings = [
   {
     id: '1',
     title: 'Modern PG near North Campus',
-    location: 'Hudson Lane, Delhi',
+    location: 'Vadodara, Gujarat',
     price: 12000,
     rating: 4.8,
     reviewCount: 120,
-    image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3',
+    image: vadodarapic,
     amenities: ['WiFi', 'AC', 'Furnished', 'Laundry'],
     type: 'PG',
     isNew: true
@@ -26,7 +30,7 @@ const allListings = [
     price: 22000,
     rating: 4.6,
     reviewCount: 85,
-    image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3',
+    image: bangImg,
     amenities: ['WiFi', 'AC', 'Furnished', 'Parking', 'Security'],
     type: '2 BHK',
   },
@@ -37,7 +41,7 @@ const allListings = [
     price: 18000,
     rating: 4.7,
     reviewCount: 64,
-    image: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3',
+    image: puneImg,
     amenities: ['WiFi', 'AC', 'Gym', 'Kitchen', 'Parking'],
     type: 'Studio',
     isNew: true
@@ -49,7 +53,7 @@ const allListings = [
     price: 8000,
     rating: 4.3,
     reviewCount: 102,
-    image: 'https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3',
+    image: hyImg,
     amenities: ['WiFi', 'Laundry', 'Security', 'Kitchen'],
     type: 'Hostel',
   }

@@ -135,8 +135,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium">Our Address</h3>
                     <p className="text-muted-foreground">
-                      123 University Street<br />
-                      Campus Town, CT 10101
+                      Ranchodham, Madodhar road<br />
+                      Waghodia, Gujarat
                     </p>
                   </div>
                 </div>
@@ -148,7 +148,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium">Email Us</h3>
                     <p className="text-muted-foreground">
-                      contact@accomfind.com<br />
+                      lalbahadurlohar01@gmail.com<br />
                       support@accomfind.com
                     </p>
                   </div>
@@ -161,7 +161,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium">Call Us</h3>
                     <p className="text-muted-foreground">
-                      +1 (555) 123-4567<br />
+                      +91 6354535339<br />
                       +1 (555) 765-4321
                     </p>
                   </div>
@@ -184,7 +184,10 @@ const Contact = () => {
             
             {/* Map Placeholder */}
             <div className="bg-accent h-64 rounded-lg flex items-center justify-center">
-              <p className="text-muted-foreground">Interactive Map Would Be Displayed Here</p>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14764.518928188683!2d73.40623384999999!3d22.31093285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1740771495099!5m2!1sen!2sin" width="100%" height="100%" style={{ border: "none" }}
+              allowFullScreen
+              loading="lazy" referrerPolicy="no-referrer-when-downgrade">
+             </iframe>
             </div>
           </div>
         </div>

@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, Shield, UserCheck } from 'lucide-react';
 import SearchBar from './SearchBar';
+import profileImage from "../assest/lalbahadur.jpeg";
+import backgroundImg from "../assest/heropic.jpg";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -58,7 +60,7 @@ const HeroSection = () => {
               <div className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-primary" />
                 <div>
-                  <span className="block text-xl font-bold">1,200+</span>
+                  <span className="block text-xl font-bold">4+</span>
                   <span className="text-sm text-muted-foreground">Verified Properties</span>
                 </div>
               </div>
@@ -72,7 +74,7 @@ const HeroSection = () => {
               <div className="flex items-center gap-2">
                 <UserCheck className="h-5 w-5 text-primary" />
                 <div>
-                  <span className="block text-xl font-bold">15,000+</span>
+                  <span className="block text-xl font-bold">4+</span>
                   <span className="text-sm text-muted-foreground">Happy Students</span>
                 </div>
               </div>
@@ -102,7 +104,7 @@ const HeroSection = () => {
           <div className="w-full lg:w-1/2 relative">
             <div className="relative z-10 animate-float">
               <img
-                src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3"
+                src={backgroundImg}
                 alt="Modern student accommodation"
                 className="rounded-2xl shadow-2xl"
               />
@@ -110,12 +112,12 @@ const HeroSection = () => {
                 <div className="bg-background rounded-xl shadow-xl p-4 max-w-xs animate-slide-in-bottom">
                   <div className="flex items-center gap-3">
                     <img 
-                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2187&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                      src={profileImage} 
                       alt="Happy student" 
                       className="w-10 h-10 rounded-full object-cover"
                     />
                     <div>
-                      <div className="font-medium">Sarah T.</div>
+                      <div className="font-medium">Lal Bahadur</div>
                       <div className="text-xs text-muted-foreground">Computer Science Student</div>
                     </div>
                   </div>
